@@ -1,0 +1,151 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+}
+
+
+.clients img{
+    height: auto;
+    width: auto;
+    object-fit: auto;
+}
+
+.main-slide{
+    padding: 25px;
+}
+
+.products{
+    width: 100%;
+    margin: auto;
+    color: #FFF;
+}
+
+.products-type{
+    border: 1px solid #FFF;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.section-form{
+    background-image: url("img/img-form.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+.navbar-brand img{
+    width: 200px;
+    height: auto;
+}
+.navbar-nav li a {
+    position: relative;
+    color: rgb(0, 0, 0)!important;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbar-nav li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to right, rgb(22, 28, 140), rgb(157, 74, 244)); /* Gradiente de cores para a linha no hover */
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+    transform-origin: left;
+  }
+  
+  .navbar-nav li a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+    background-image: linear-gradient(to right, rgb(22, 28, 140), rgb(157, 74, 244)); /* Gradiente de cores para a linha no hover */
+  }
+  
+  .navbar-nav li a:hover {
+    color: rgb(157, 74, 244)!important; /* Altera a cor do texto ao passar o mouse */
+  }
+  
+  .products-type {
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Adicionada a transição para a box shadow */
+  }
+  
+  .products-type:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.7); /* Adicionada a box shadow */
+  }
+
+  button:focus {
+    outline: 5px auto rgb(157, 74, 244);
+}
+  
+
+footer{
+    background-image: linear-gradient(315deg, rgb(157, 74, 244) -2%,#161C8C 44%, #000);
+}
+
+footer img{
+    margin-top: -65px;
+    margin-left: -125px;
+}
+
+footer svg{
+    width: 30px;
+    height: auto;
+}
+
+.list-products a:hover{
+    color:  rgb(157, 74, 244)!important;
+    transition: color 0.3s linear;
+}
+
+.social-icon {
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.2);
+  }
+
+@media screen and (max-width: 992px) {
+
+    .products{
+        width: 80%!important;
+    }
+
+    .products-mobile{
+        margin-bottom: 40px!important;
+    }
+
+    .section-form{
+        background-image: url("img/img-form-mobile.png");
+        background-size: contain;
+    }
+
+    .navbar-nav li a {
+        color: rgb(0, 0, 0)!important;
+      }
+
+    footer img{
+        margin-top: -25px!important;
+        margin-left: -40px!important;
+    }
+
+    footer row{
+        flex-direction: column;
+    }
+
+    .footer-mobile{
+        text-align: center;
+    }
+
+    .footer-mobile-products{
+        margin-bottom: 30px;
+    }
+}
